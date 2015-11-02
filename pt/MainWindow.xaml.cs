@@ -307,6 +307,31 @@ namespace MathProject
                 lbMain.Items.Add("Сумма элементов меньших 21=");
                 lbMain.Items.Add(c);
             }
+            if (Convert.ToInt32(comboBox1.Text) == 8)
+            {
+                int[] arr = new int[k];
+                int c = 0;
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    arr[i] = -100 + rnd1.Next(200);
+                }
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    if (arr[i]%5==0)
+                    {
+                        arr[i]++; ;
+                    }
+                }
+                lbMain.Items.Add("Новый массив=");
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+            }
         }              
     }
 }
