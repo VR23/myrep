@@ -148,7 +148,7 @@ namespace MathProject
                 {
                     lbMain.Items.Add(arr[i]);
                 }
-                for (int i = 0; i <= k; i++)
+                for (int i = 0; i <= k-1; i++)
                 {
                     if (arr[i] > 25)
                     {
@@ -160,8 +160,29 @@ namespace MathProject
                 lbMain.Items.Add(m + 1);
 
             }
-        }
+            if (Convert.ToInt32(comboBox1.Text) == 3)
+            {
+                int[] arr = new int[k];
+                int c=0;
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    arr[i] = -100 + rnd1.Next(200);
+                }
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 0; i <= k-1; i++)
+                {
+                    if (arr[i] > arr[2])
+                    {
+                        c = c + arr[i];
+                    }
+                }
+                lbMain.Items.Add("Сумма элементов больших второго элемента=");
+                lbMain.Items.Add(c);
 
-        
+            }
+        }              
     }
 }
