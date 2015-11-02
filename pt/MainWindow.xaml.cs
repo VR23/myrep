@@ -213,6 +213,58 @@ namespace MathProject
                 }
 
             }
+            if (Convert.ToInt32(comboBox1.Text) == 5)
+            { //gde nugno e
+                int[] arr = new int[k];
+                int smen = 0;
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    arr[i] = -100 + rnd1.Next(200);
+                }
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                int temp = 0;
+                if (arr[0] > 0) temp = 0;
+                else temp = 1;
+
+
+                for (int i = 0; i < k; i++)
+                {
+                    if (arr[i] > 0)
+                    {
+                        if (temp == 1)
+                        {
+                            //temp = 1;
+                        }
+                        else
+                        {
+                            smen++;
+                            temp = 1;
+                        }
+                    }
+                    else
+                    {
+                        if (temp == 0)
+                        {
+                            //smen++;
+                        }
+                        else
+                        {
+                            smen++;
+                            temp = 0;
+                        }
+                    }
+
+                }
+
+                smen--;
+                lbMain.Items.Add(smen);
+                
+                
+
+            }
         }              
     }
 }
