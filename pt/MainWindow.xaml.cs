@@ -354,6 +354,28 @@ namespace MathProject
                 lbMain.Items.Add("Сумма элементов не кратных 3=");
                 lbMain.Items.Add(c);
             }
+            if (Convert.ToInt32(comboBox1.Text) == 10)
+            {
+                int[] arr = new int[k];
+                int c = 0;
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    arr[i] = -100 + rnd1.Next(200);
+                }
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 1; i <= k - 2; i++)
+                {
+                    if (arr[i]<arr[1]&&arr[i]>arr[k-1])
+                    {
+                        c++;
+                    }
+                }
+                lbMain.Items.Add("Количество элементов,меньших первого и больших последнего одновременно=");
+                lbMain.Items.Add(c);
+            }
         }              
     }
 }
