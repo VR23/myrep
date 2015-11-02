@@ -137,7 +137,31 @@ namespace MathProject
                 lbMain.Items.Add(m);
 
             }
+            if (Convert.ToInt32(comboBox1.Text) == 2)
+            {
+                int[] arr = new int[k];
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    arr[i] = -100 + rnd1.Next(200);
+                }
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 0; i <= k; i++)
+                {
+                    if (arr[i] > 25)
+                    {
+                        m = i;
+                        break;
+                    }
+                }
+                lbMain.Items.Add("Первый элемент больший 25=");
+                lbMain.Items.Add(m + 1);
 
+            }
         }
+
+        
     }
 }
