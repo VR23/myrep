@@ -323,7 +323,7 @@ namespace MathProject
                 {
                     if (arr[i]%5==0)
                     {
-                        arr[i]++; ;
+                        arr[i]++; 
                     }
                 }
                 lbMain.Items.Add("Новый массив=");
@@ -331,6 +331,28 @@ namespace MathProject
                 {
                     lbMain.Items.Add(arr[i]);
                 }
+            }
+            if (Convert.ToInt32(comboBox1.Text) == 9)
+            {
+                int[] arr = new int[k];
+                int c = 0;
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    arr[i] = -100 + rnd1.Next(200);
+                }
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    if (arr[i] % 3 != 0)
+                    {
+                        c = c + arr[i];
+                    }
+                }
+                lbMain.Items.Add("Сумма элементов не кратных 3=");
+                lbMain.Items.Add(c);
             }
         }              
     }
