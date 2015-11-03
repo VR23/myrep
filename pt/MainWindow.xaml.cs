@@ -423,7 +423,52 @@ namespace MathProject
                 }
                
             }
+            if (Convert.ToInt32(comboBox1.Text) == 13)
+            {
+                int[] arr = new int[10];
+                int c = 0;
 
+                for (int i = 0; i <= 9; i++)
+                {
+                    arr[i] = -10 + rnd1.Next(20);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    if (arr[i]!=0)
+                    {
+                        c++;
+                    }
+                }
+                lbMain.Items.Add("Количество ненулевых элементов массива=");
+                lbMain.Items.Add(c);
+
+            }
+            if (Convert.ToInt32(comboBox1.Text) == 14)
+            {
+                int[] arr = new int[10];
+                int c = 0;
+                for (int i = 0; i <= 9; i++)
+                {
+                    arr[i] = -100 + rnd1.Next(200);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    if (arr[i] % 3 == 0)
+                    {
+                        c++;
+                    }
+                }
+                lbMain.Items.Add("Сумма элементов кратных 3=");
+                lbMain.Items.Add(c);
+            }
             if (Convert.ToInt32(comboBox1.Text) == 16)
             {
                 
