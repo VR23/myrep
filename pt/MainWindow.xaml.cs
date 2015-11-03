@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections;
+using System.Diagnostics;
 
 
 namespace MathProject
@@ -113,20 +114,20 @@ namespace MathProject
         private void go_Click(object sender, RoutedEventArgs e)
         {
             Random rnd1 = new Random();
-            int m = 0;
-            int k = Convert.ToInt32(tbN.Text);
+            int m = 0;            
+            //int k = Convert.ToInt32(tbN.Text);
             if (Convert.ToInt32(comboBox1.Text) == 1)
             {
-                int[] arr = new int[k];
-                for (int i = 0; i <= k - 1; i++)
+                int[] arr = new int[10];
+                for (int i = 0; i <= 9; i++)
                 {
                     arr[i] = -100 + rnd1.Next(200);
                 }
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     lbMain.Items.Add(arr[i]);
                 }
-                for (int i = 1; i <= k - 2; i++)
+                for (int i = 1; i <= 8; i++)
                 {
                     if ((arr[i] > arr[i - 1]) & (arr[i] > arr[i + 1]))
                     {
@@ -139,16 +140,16 @@ namespace MathProject
             }
             if (Convert.ToInt32(comboBox1.Text) == 2)
             {
-                int[] arr = new int[k];
-                for (int i = 0; i <= k - 1; i++)
+                int[] arr = new int[10];
+                for (int i = 0; i <= 9; i++)
                 {
                     arr[i] = -100 + rnd1.Next(200);
                 }
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     lbMain.Items.Add(arr[i]);
                 }
-                for (int i = 0; i <= k-1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     if (arr[i] > 25)
                     {
@@ -162,17 +163,17 @@ namespace MathProject
             }
             if (Convert.ToInt32(comboBox1.Text) == 3)
             {
-                int[] arr = new int[k];
+                int[] arr = new int[10];
                 int c=0;
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     arr[i] = -100 + rnd1.Next(200);
                 }
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     lbMain.Items.Add(arr[i]);
                 }
-                for (int i = 0; i <= k-1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     if (arr[i] > arr[2])
                     {
@@ -185,24 +186,24 @@ namespace MathProject
             }
             if (Convert.ToInt32(comboBox1.Text) == 4)
             {
-                int[] arr = new int[k];
+                int[] arr = new int[10];
                 double srzn = 0;
                 int c = 0;
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     arr[i] = -100 + rnd1.Next(200);
                 }
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     lbMain.Items.Add(arr[i]);
                 }
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     srzn = srzn + arr[i];
                     c = arr[0];
 
                 }
-                srzn = srzn / k;
+                srzn = srzn / 10;
                 if (c > srzn)
                 {
                     lbMain.Items.Add("Первый элемент больше среднего значения");
@@ -215,13 +216,13 @@ namespace MathProject
             }
             if (Convert.ToInt32(comboBox1.Text) == 5)
             { //gde nugno e
-                int[] arr = new int[k];
+                int[] arr = new int[10];
                 int smen = 0;
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     arr[i] = -100 + rnd1.Next(200);
                 }
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     lbMain.Items.Add(arr[i]);
                 }
@@ -230,7 +231,7 @@ namespace MathProject
                 else temp = 1;
 
 
-                for (int i = 0; i < k; i++)
+                for (int i = 0; i < 9; i++)
                 {
                     if (arr[i] > 0)
                     {
@@ -260,22 +261,23 @@ namespace MathProject
                 }
 
                 smen--;
+                lbMain.Items.Add("Количество смен знака=");   
                 lbMain.Items.Add(smen);               
                 
             }
             if (Convert.ToInt32(comboBox1.Text) == 6)
             {
-                int[] arr = new int[k];
+                int[] arr = new int[10];
                 int c = 0;
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     arr[i] = -100 + rnd1.Next(200);
                 }
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     lbMain.Items.Add(arr[i]);
                 }
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     if (arr[i] > arr[3])
                     {
@@ -287,17 +289,17 @@ namespace MathProject
             }
             if (Convert.ToInt32(comboBox1.Text) == 7)
             {
-                int[] arr = new int[k];
+                int[] arr = new int[10];
                 int c = 0;
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     arr[i] = -100 + rnd1.Next(200);
                 }
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     lbMain.Items.Add(arr[i]);
                 }
-                for (int i = 0; i <= k - 1; i++)
+                for (int i = 0; i <= 9; i++)
                 {
                     if (arr[i] < 21)
                     {
@@ -306,6 +308,81 @@ namespace MathProject
                 }
                 lbMain.Items.Add("Сумма элементов меньших 21=");
                 lbMain.Items.Add(c);
+            }
+            if (Convert.ToInt32(comboBox1.Text) == 8)
+            {
+                int[] arr = new int[10];
+                int c = 0;
+                for (int i = 0; i <= 9; i++)
+                {
+                    arr[i] = -100 + rnd1.Next(200);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    if (arr[i]%5==0)
+                    {
+                        arr[i]++; 
+                    }
+                }
+                lbMain.Items.Add("Новый массив=");
+                for (int i = 0; i <= 9; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+            }
+            if (Convert.ToInt32(comboBox1.Text) == 9)
+            {
+                int[] arr = new int[10];
+                int c = 0;
+                for (int i = 0; i <= 9; i++)
+                {
+                    arr[i] = -100 + rnd1.Next(200);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    if (arr[i] % 3 != 0)
+                    {
+                        c = c + arr[i];
+                    }
+                }
+                lbMain.Items.Add("Сумма элементов не кратных 3=");
+                lbMain.Items.Add(c);
+            }
+            if (Convert.ToInt32(comboBox1.Text) == 10)
+            {
+                int[] arr = new int[10];
+                int c = 0;
+                for (int i = 0; i <= 9; i++)
+                {
+                    arr[i] = -100 + rnd1.Next(200);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 1; i <= 8; i++)
+                {
+                    if (arr[i]<arr[1]&&arr[i]>arr[9])
+                    {
+                        c++;
+                    }
+                }
+                lbMain.Items.Add("Количество элементов,меньших первого и больших последнего одновременно=");
+                lbMain.Items.Add(c);
+            }
+
+            if (Convert.ToInt32(comboBox1.Text) == 16)
+            {
+                
+                Process.Start("C:\\Users\\Глебушка\\Desktop\\тп\\WindowsFormsApplication1\\WindowsFormsApplication1\\bin\\Debug\\WindowsFormsApplication1.exe");
             }
         }              
     }
