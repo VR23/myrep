@@ -378,11 +378,100 @@ namespace MathProject
                 lbMain.Items.Add("Количество элементов,меньших первого и больших последнего одновременно=");
                 lbMain.Items.Add(c);
             }
+                for (int i = 0; i <= k-1; i++)
+                {
+                    if (arr[i] > arr[2])
+                    {
+                        c = c + arr[i];
+                    }
+                }
+                lbMain.Items.Add("Сумма элементов больших второго элемента=");
+                lbMain.Items.Add(c);
 
+            }
+            
             if (Convert.ToInt32(comboBox1.Text) == 16)
+            
             {
+                int[] arr = new int[k];
+                double srzn = 0;
+                int c = 0;
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    arr[i] = -100 + rnd1.Next(200);
+                }
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    srzn = srzn + arr[i];
+                    c = arr[0];
+
+                }
+                srzn = srzn / k;
+                if (c > srzn)
+                {
+                    lbMain.Items.Add("Первый элемент больше среднего значения");
+                }
+                else
+                {
+                    lbMain.Items.Add("Первый элемент меньше среднего значения");
+                }
+
+            }
+            if (Convert.ToInt32(comboBox1.Text) == 5)
+            { //gde nugno e
+                int[] arr = new int[k];
+                int smen = 0;
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    arr[i] = -100 + rnd1.Next(200);
+                }
+                for (int i = 0; i <= k - 1; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                int temp = 0;
+                if (arr[0] > 0) temp = 0;
+                else temp = 1;
+
+
+                for (int i = 0; i < k; i++)
+                {
+                    if (arr[i] > 0)
+                    {
+                        if (temp == 1)
+                        {
+                            //temp = 1;
+                        }
+                        else
+                        {
+                            smen++;
+                            temp = 1;
+                        }
+                    }
+                    else
+                    {
+                        if (temp == 0)
+                        {
+                            //smen++;
+                        }
+                        else
+                        {
+                            smen++;
+                            temp = 0;
+                        }
+                    }
+
+                }
+
+                smen--;
+                lbMain.Items.Add(smen);
                 
-                Process.Start("C:\\Users\\Глебушка\\Desktop\\тп\\WindowsFormsApplication1\\WindowsFormsApplication1\\bin\\Debug\\WindowsFormsApplication1.exe");
+                
+
             }
         }              
     }
