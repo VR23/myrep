@@ -378,7 +378,75 @@ namespace MathProject
                 lbMain.Items.Add("Количество элементов,меньших первого и больших последнего одновременно=");
                 lbMain.Items.Add(c);
             }
-           
+            if (Convert.ToInt32(comboBox1.Text) == 11)
+            {
+                int[] arr = new int[10];
+                int c = 0;
+                for (int i = 0; i <= 9; i++)
+                {
+                    arr[i] = -100 + rnd1.Next(200);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    if (arr[i] > 0 || arr[i] == 0)
+                    {
+                        c++;
+                    }
+                }
+                lbMain.Items.Add("Количество неотрицательных элементов массива=");
+                lbMain.Items.Add(c);
+            }
+            if (Convert.ToInt32(comboBox1.Text) == 12)
+            {
+                double[] arr = new double[10];
+                int c = 0;
+
+                for (int i = 0; i <= 9; i++)
+                {
+                    arr[i] = rnd1.NextDouble()*10;
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    if ((Math.Abs(arr[i]) - Math.Abs(arr[1])<0.5)&& (Math.Abs(arr[i]) - Math.Abs(arr[1])>-0.5))
+                    {
+                        lbMain.Items.Add("элемент, меньше всего отличающий­ся от второго-");
+                        lbMain.Items.Add(arr[i]);
+                    }
+                }
+               
+            }
+            if (Convert.ToInt32(comboBox1.Text) == 13)
+            {
+                int[] arr = new int[10];
+                int c = 0;
+
+                for (int i = 0; i <= 9; i++)
+                {
+                    arr[i] = -10 + rnd1.Next(20);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    lbMain.Items.Add(arr[i]);
+                }
+                for (int i = 0; i <= 9; i++)
+                {
+                    if (arr[i]!=0)
+                    {
+                        c++;
+                    }
+                }
+                lbMain.Items.Add("Количество ненулевых элементов массива=");
+                lbMain.Items.Add(c);
+
+            }
 
             if (Convert.ToInt32(comboBox1.Text) == 16)
             {
